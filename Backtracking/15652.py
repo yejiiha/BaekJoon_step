@@ -1,5 +1,6 @@
 ## N과 M (4)
 
+# 방법 1
 n, m = map(int, input().split())
 
 check = [0] * (n + 1)
@@ -23,3 +24,21 @@ def backtracking(index, n, m):
             check[i] = 0
 
 backtracking(0, n, m)    
+
+# 방법 2
+def backtracking(depth, idx, n, m):
+    if depth == m:
+        for i in result:
+            print(i, end=" ")
+        print()
+        return
+    
+    for i in range(idx, n):
+        li.append(i + 1)
+        backtracking(depth + 1, i, n, m)
+        li.out()
+
+n, m = map(int, input().split())
+li = []
+
+backtracking(0, 0, n, m)
