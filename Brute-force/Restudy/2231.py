@@ -1,13 +1,15 @@
 ## 분해합
 
+def divided_hap(n):
+    return n + sum(map(int, str(n)))
+
 n = int(input())
+k = 0
 
-for i in range(1, n + 1):
-    devided_num = list(map(int, str(i)))
-    devided_sum = i + sum(devided_num)
+while divided_hap(k) != n:
+    if k == n:
+        k = 0
+    else:
+        k += 1
 
-    if devided_sum == n:
-        print(i)
-        break
-    if i == n:
-        print(0)
+print(k)
