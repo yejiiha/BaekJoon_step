@@ -9,8 +9,7 @@ x = [int(input()) for _ in range(n)]
 
 x.sort()
 
-start = x[1] - x[0]
-end = x[-1] - x[0]
+start, end = 1, x[-1] - x[0]
 
 result = 0
 
