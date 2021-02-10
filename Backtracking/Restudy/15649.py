@@ -3,13 +3,13 @@
 n, m = map(int, input().split())
 
 num_li = [1 + i for i in range(n)]   # 숫자 리스트
-check = [0] * n                # 중복숫자 체크
-array = []                                # 출력할 수열
+check = [0] * n                      # 중복숫자 체크
+array = []                           # 출력할 수열
  
 def back_tracking(x):
-    if x == m:                            # 수열 m개를 충족할경우 출력
-            print(*array)            
-            return
+    if x == m:                       # 수열 m개를 충족할경우 출력
+        print(*array)            
+        return
             
     for i in range(n):
         if check[i]:               # 중복될 경우 패스
